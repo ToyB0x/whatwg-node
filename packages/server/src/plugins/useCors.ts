@@ -54,9 +54,6 @@ export function getCORSHeadersByRequestAndOptions(
       headers['Access-Control-Allow-Origin'] = currentOrigin;
       // Vary by origin because there are multiple origins
       headers['Vary'] = 'Origin';
-    } else {
-      // There is no origin found in the headers, so we should return null
-      headers['Access-Control-Allow-Origin'] = 'null';
     }
   }
 
