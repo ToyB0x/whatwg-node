@@ -83,7 +83,7 @@ describe('CORS', () => {
         },
       });
       const headers = getCORSHeadersByRequestAndOptions(request, corsOptionsWithMultipleOrigins);
-      expect(headers?.['Access-Control-Allow-Origin']).toBe('null');
+      expect(headers?.['Access-Control-Allow-Origin']).toBeUndefined();
     });
   });
   describe('Disabled CORS', () => {
